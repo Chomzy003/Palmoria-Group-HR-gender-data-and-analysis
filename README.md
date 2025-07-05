@@ -117,4 +117,4 @@ An interactive Power BI dashboard was created that includes:
 **Ejigha Chioma**  
 HR & Data Analytics Consultant  
 📧 Email: [Chiomaejigha2@gmaoil.com]  
-🌐 Portfolio: [your portfolio link]
+🌐 Portfolio: [My portfolio](https://github.com/Chomzy003)
