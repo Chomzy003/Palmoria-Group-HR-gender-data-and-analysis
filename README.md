@@ -62,26 +62,26 @@ An interactive Power BI dashboard was created that includes:
 - Bonus allocation favors higher-rated employees, with slight gender skew
 - Most salaries cluster between $70,000 and $90,000
 
-## DAX & Power Query Samples
+## DAX & Power Query Code Samples
 
 ### Assigning Undisclosed Gender
 ```powerquery
-= Table.ReplaceValue(#"PreviousStep", null, "Undisclosed", Replacer.ReplaceValue, {"Gender"})
+= Table.ReplaceValue(#"Change Type","","Undisclosed",Replacer.ReplaceValue,{"Gender"})
 ```
 
 ### Creating Dept Rating (Power Query Custom Column)
 ```powerquery
-= [Department] & " - " & Text.From([Rating])
+= Table.AddColumn(#"Unpivoted Columns", "Dept Rating", each [Department]&"/"&[Attribute])
 ```
 
 ### Calculating Annual Bonus (DAX)
 ```DAX
-Annual Bonus = 'Employee Data'[Salary] * RELATED('Bonus Mapping'[Bonus Rate])
+= Table.AddColumn(#"Replaced Value", "Annual Bonus", each [Salary]*[Bonus Rate])
 ```
 
 ### Calculating Total Pay (DAX)
 ```DAX
-Total Pay = 'Employee Data'[Salary] + 'Employee Data'[Annual Bonus]
+= Table.AddColumn(#"Added Custom", "Total Pay", each [Salary]+[Annual Bonus])
 ```
 
 ### Salary Band (Power Query Conditional Column)
