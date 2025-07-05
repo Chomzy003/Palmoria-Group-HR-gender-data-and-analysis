@@ -18,6 +18,9 @@ Two HR datasets were provided:
 
 These datasets were imported into Power BI, cleaned, modeled, and visualized.
 
+`DASHBOARD SAMPLE`
+![PHOTO-2025-07-05-14-17-18](https://github.com/user-attachments/assets/f6b9a569-bfaa-431b-b15e-3d31291bd308)
+
 ## Data Cleaning & Preparation
 
 Steps performed:
